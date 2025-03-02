@@ -1,12 +1,17 @@
+<!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <title>Blog - @yield('title')</title>
+        <title>@yield('title') - Blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
     <body>
         @include('frontend.layouts.header')
-        <div class="container">
+
+        <main class="container">
             @yield('content')
-        </div>
+        </main>
+        
         @include('frontend.layouts.footer')
     </body>
 </html>
